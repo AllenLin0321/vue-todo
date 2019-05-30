@@ -2,6 +2,11 @@
   <div class="home">
     <h1>HomePage</h1>
 
+    <!-- <v-btn class="hidden-sm-and-down">Click me</v-btn> -->
+
+    <v-btn class="hidden-md-and-up">Click me</v-btn>
+
+
     <!-- Button -->
     <!-- <v-btn color="success">Click me</v-btn>
     <v-btn dark depressed color="pink">Click me</v-btn>
