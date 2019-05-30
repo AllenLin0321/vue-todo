@@ -14,8 +14,19 @@
     </v-toolbar>
 
     <v-navigation-drawer app class="deep-purple lighten-2" v-model="drawer">
-      <v-list>
 
+      <v-layout column align-center>
+        <v-flex class="mt-5">
+          <v-avatar size="100">
+            <img src="/avatar-1.jpg">
+          </v-avatar>
+          <p class="white--text subheading mt-1">
+            Shiba Inu
+          </p>
+        </v-flex>
+      </v-layout>
+
+      <v-list>
         <v-list-tile v-for="(link, index) in links" :key="index" :to="link.route">
           <v-list-tile-action>
             <v-icon class="white--text">{{ link.icon }}</v-icon>
