@@ -15,6 +15,7 @@
 
     <v-navigation-drawer app class="deep-purple lighten-2" v-model="drawer">
 
+      <!-- Header Image -->
       <v-layout column align-center>
         <v-flex class="mt-5">
           <v-avatar size="100">
