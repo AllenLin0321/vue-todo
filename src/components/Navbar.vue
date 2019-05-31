@@ -54,7 +54,7 @@
         <!-- Header Image -->
         <v-flex class="mt-5">
           <v-avatar size="100">
-            <img src="/avatar-1.jpg">
+            <img src="avatar-1.jpg">
           </v-avatar>
           <p class="white--text subheading mt-1">Allen Lin</p>
         </v-flex>

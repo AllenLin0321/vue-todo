@@ -34,11 +34,11 @@ export default {
   data() {
     return {
       team: [
-        { name: "Allen", role: "Web developer", avatar: '/avatar-1.jpg' },
-        { name: "Ryu", role: "Graphic designer", avatar: '/avatar-2.png' },
-        { name: "Chun Li", role: "Web developer", avatar: '/avatar-3.png' },
-        { name: "Gouken", role: "Social media maverick", avatar: '/avatar-4.png' },
-        { name: "Yoshi", role: "Sales guru", avatar: '/avatar-5.png' }
+        { name: "Allen", role: "Web developer", avatar: './avatar-1.jpg' },
+        { name: "Ryu", role: "Graphic designer", avatar: './avatar-2.png' },
+        { name: "Chun Li", role: "Web developer", avatar: './avatar-3.png' },
+        { name: "Gouken", role: "Social media maverick", avatar: './avatar-4.png' },
+        { name: "Yoshi", role: "Sales guru", avatar: './avatar-5.png' }
       ]
     };
   }
