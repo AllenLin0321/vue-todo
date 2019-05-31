@@ -27,6 +27,13 @@
         </v-list>
       </v-menu>
 
+      <v-menu>
+          <v-btn flat v-on="on" color="grey">
+            <v-icon left>expand_more</v-icon>
+            <span>Menu</span>
+          </v-btn>
+      </v-menu>
+
       <!-- Sign Out -->
       <v-btn flat color="grey">
         <span>Sing Out</span>
