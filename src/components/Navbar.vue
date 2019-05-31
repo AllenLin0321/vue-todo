@@ -36,13 +36,18 @@
 
     <!-- Navigation Drawer -->
     <v-navigation-drawer app class="deep-purple lighten-2" v-model="drawer">
-      <!-- Header Image -->
       <v-layout column align-center>
+        <!-- Header Image -->
         <v-flex class="mt-5">
           <v-avatar size="100">
             <img src="/avatar-1.jpg">
           </v-avatar>
           <p class="white--text subheading mt-1">Allen Lin</p>
+        </v-flex>
+
+        <!-- Add new project -->
+        <v-flex class="mt-4 mb-3">
+          <Popup/>
         </v-flex>
       </v-layout>
 
@@ -61,7 +66,11 @@
 </template>
 
 <script>
+import Popup from "./Popup";
 export default {
+  components: {
+    Popup
+  },
   data() {
     return {
       drawer: true,
