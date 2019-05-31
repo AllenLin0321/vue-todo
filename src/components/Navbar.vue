@@ -1,12 +1,37 @@
 <template>
   <nav>
     <v-toolbar flat app class="text-uppercase grey--text">
+      <!-- Hamburger -->
       <v-toolbar-side-icon @click="drawer = !drawer" class="grey--text"></v-toolbar-side-icon>
+
+      <!-- Website Title -->
       <v-toolbar-title>
         <span class="font-weight-light">Todo</span>
         <span>Allen</span>
       </v-toolbar-title>
+
       <v-spacer></v-spacer>
+
+      <!-- Dropdown Menu -->
+      <v-menu offset-y>
+        <template v-slot:activator="{ on }">
+          <v-btn color="primary" dark v-on="on">Dropdown</v-btn>
+        </template>
+        <v-list>
+          <v-list-tile v-for="(item, index) in items" :key="index">
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+
+      <v-menu>
+          <v-btn flat v-on="on" color="grey">
+            <v-icon left>expand_more</v-icon>
+            <span>Menu</span>
+          </v-btn>
+      </v-menu>
+
+      <!-- Sign Out -->
       <v-btn flat color="grey">
         <span>Sing Out</span>
         <v-icon right>exit_to_app</v-icon>
@@ -14,16 +39,13 @@
     </v-toolbar>
 
     <v-navigation-drawer app class="deep-purple lighten-2" v-model="drawer">
-
       <!-- Header Image -->
       <v-layout column align-center>
         <v-flex class="mt-5">
           <v-avatar size="100">
             <img src="/avatar-1.jpg">
           </v-avatar>
-          <p class="white--text subheading mt-1">
-            Shiba Inu
-          </p>
+          <p class="white--text subheading mt-1">Allen Lin</p>
         </v-flex>
       </v-layout>
 
@@ -36,7 +58,6 @@
             <v-list-tile-title class="white--text">{{ link.text }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-
       </v-list>
     </v-navigation-drawer>
   </nav>
