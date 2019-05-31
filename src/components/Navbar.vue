@@ -15,20 +15,16 @@
       <!-- Dropdown Menu -->
       <v-menu offset-y>
         <template v-slot:activator="{ on }">
-          <v-btn color="primary" dark v-on="on">Dropdown</v-btn>
-        </template>
-        <v-list>
-          <v-list-tile v-for="(item, index) in items" :key="index">
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-menu>
-
-      <v-menu>
           <v-btn flat v-on="on" color="grey">
             <v-icon left>expand_more</v-icon>
             <span>Menu</span>
           </v-btn>
+        </template>
+        <v-list>
+          <v-list-tile v-for="link in links" :key="link.text" :to="link.route">
+            <v-list-tile-title>{{ link.text }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
       </v-menu>
 
       <!-- Sign Out -->
@@ -38,6 +34,7 @@
       </v-btn>
     </v-toolbar>
 
+    <!-- Navigation Drawer -->
     <v-navigation-drawer app class="deep-purple lighten-2" v-model="drawer">
       <!-- Header Image -->
       <v-layout column align-center>
