@@ -67,6 +67,7 @@ export default {
           .then(res => {
             this.dialog = false;
             this.loading = false;
+            this.$emit('projectAdded');
           });
       } else {
         alert("輸入資料錯誤");
